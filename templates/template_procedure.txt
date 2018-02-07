@@ -1,0 +1,10 @@
+USE `%%db%%`;
+DROP PROCEDURE IF EXISTS `%%specific_name%%`;
+DELIMITER //
+CREATE DEFINER = 'root'@'localhost' PROCEDURE `%%specific_name%%`
+(%%param_list%%)
+COMMENT '%%comment%%'
+%boolean_det%DETERMINISTIC
+%%body%%//
+DELIMITER ;
+

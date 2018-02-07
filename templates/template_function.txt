@@ -1,0 +1,12 @@
+USE `%%db%%`;
+DROP FUNCTION IF EXISTS `%%specific_name%%`;
+DELIMITER //
+CREATE DEFINER = 'root'@'localhost'  FUNCTION `%%specific_name%%`
+(%%param_list%%)
+RETURNS
+%%returns%%
+COMMENT '%%comment%%'
+%boolean_det%DETERMINISTIC
+%%body%%//
+DELIMITER ;
+

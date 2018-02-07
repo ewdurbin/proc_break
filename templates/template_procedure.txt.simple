@@ -1,0 +1,12 @@
+USE `%%db%%`;
+
+DROP PROCEDURE IF EXISTS `%%specific_name%%`;
+
+DELIMITER //
+CREATE PROCEDURE `%%specific_name%%`
+(%%param_list%%)
+
+%%body%%//
+
+DELIMITER ;
+

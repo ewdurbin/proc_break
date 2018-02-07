@@ -1,0 +1,16 @@
+USE `%%db%%`;
+
+DROP FUNCTION IF EXISTS `%%specific_name%%`;
+
+DELIMITER //
+CREATE FUNCTION `%%specific_name%%`
+(%%param_list%%)
+RETURNS
+%%returns%%
+
+%boolean_det%DETERMINISTIC
+
+%%body%%//
+
+DELIMITER ;
+
